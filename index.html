@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ترند | TREND — مشروبات غازية حمضية ومُثلّجة</title>
+  <meta name="description"
+    content="موقع ترند للمشروبات الغازية. هوية زجاجية معتمة، انتعاش الفيروز والحمضيات، فقاعات مُثلّجة ونكهات طبيعية فريدة.">
+
+  <!-- Google Fonts: Cairo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Floating Glass Header -->
+  <header class="glass-header-wrap">
+    <nav class="glass-panel main-nav" id="mainNav">
+      <a href="#" class="brand-logo" id="brandLogo">
+        <span class="logo-icon">
+          <svg width="24" height="28" viewBox="0 0 24 28" fill="none">
+            <path d="M12 2C12 2 4 12 4 18C4 22.4183 7.58172 26 12 26C16.4183 26 20 22.4183 20 18C20 12 12 2 12 2Z"
+              fill="url(#logoGrad)" />
+            <circle cx="10" cy="14" r="1.5" fill="#FFFFFF" opacity="0.8" />
+            <circle cx="14" cy="19" r="1" fill="#FFFFFF" opacity="0.9" />
+            <defs>
+              <linearGradient id="logoGrad" x1="4" y1="2" x2="20" y2="26" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#FF6B35" />
+                <stop offset="1" stop-color="#26E0C2" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </span>
+        <span class="logo-text">ترند <small>TREND</small></span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#hero" class="active">الرئيسية</a></li>
+        <li><a href="#flavors">النكهات</a></li>
+        <li><a href="#fizz-lab">مختبر الانتعاش</a></li>
+        <li><a href="news.html">الأخبار</a></li>
+        <li><a href="#locator">منافذ البيع</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="btn btn-citrus" id="navOrderBtn">اطلب الانتعاش الان</button>
+        <button class="mobile-toggle-btn" id="mobileNavToggle" aria-label="القائمة">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="hero">
+    <!-- Ambient rising bubbles background canvas -->
+    <div class="bubbles-bg-container" id="bubblesContainer"></div>
+
+    <!-- Hero Background Glow Blobs -->
+    <div class="glow-blob glow-hero-citrus"></div>
+    <div class="glow-blob glow-hero-fizz"></div>
+
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="fizz-dot"></span>
+          مُثلّج عند -4° مئوية — فقاعات غازية حمضية
+        </div>
+
+        <h1 class="hero-title">
+          انتعاش يفيض بالفقاعات <span class="highlight-citrus">المُثلّجة</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          ترند يقدم لك تجربة صودا حمضية وفيروزية فائقة البرودة. ألواح زجاجية معتمة، قطرات تكثيف باردة، ونكهات طبيعية
+          تتجاوز المألوف بدون مواد حافظة.
+        </p>
+
+        <!-- Glass CTA Panel -->
+        <div class="glass-panel hero-cta-panel">
+          <div class="cta-actions">
+            <a href="#flavors" class="btn btn-citrus btn-lg" id="exploreFlavorsBtn">استكشف النكهات</a>
+            <a href="#fizz-lab" class="btn btn-glass btn-lg" id="tryLabBtn">جرّب مختبر الفقاعات</a>
+          </div>
+
+          <div class="hero-metrics">
+            <div class="metric-item">
+              <span class="metric-val">100%</span>
+              <span class="metric-lbl">عصير حمضي طبيعي</span>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+              <span class="metric-val">-4°C</span>
+              <span class="metric-lbl">درجة التقديم المثالية</span>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+              <span class="metric-val">0%</span>
+              <span class="metric-lbl">سكر مضاف</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual Can Mockup -->
+      <div class="hero-visual">
+        <div class="can-glow-wrapper">
+          <div class="glow-blob hero-can-glow"></div>
+
+          <div class="glass-panel can-display-card">
+            <div class="frosted-overlay"></div>
+            <!-- Condensation droplets layer -->
+            <div class="condensation-layer">
+              <div class="drop d1"></div>
+              <div class="drop d2"></div>
+              <div class="drop d3"></div>
+              <div class="drop d4"></div>
+              <div class="drop d5"></div>
+              <div class="drop d6"></div>
+            </div>
+
+            <!-- CSS SVG Rendered Can Mockup -->
+            <div class="hero-can-render" id="heroCanRender">
+              <svg class="can-svg" width="220" height="380" viewBox="0 0 220 380" fill="none">
+                <!-- Can Shadow -->
+                <ellipse cx="110" cy="365" rx="75" ry="12" fill="rgba(0,0,0,0.5)" filter="blur(8px)" />
+
+                <!-- Can Body Base -->
+                <path d="M40 50 C40 40, 180 40, 180 50 L180 340 C180 355, 40 355, 40 340 Z" fill="url(#canMetalGrad)" />
+
+                <!-- Can Printed Label -->
+                <path d="M40 80 L180 80 L180 320 L40 320 Z" fill="url(#canLabelGrad)" />
+
+                <!-- Brand Graphic Elements on Can -->
+                <circle cx="110" cy="170" r="50" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.2)"
+                  stroke-width="1.5" />
+                <text x="110" y="165" font-family="Cairo" font-weight="800" font-size="28" fill="#F4F7F6"
+                  text-anchor="middle">ترند</text>
+                <text x="110" y="190" font-family="Cairo" font-weight="700" font-size="13" fill="#26E0C2"
+                  text-anchor="middle" letter-spacing="2">CITRUS FIZZ</text>
+
+                <!-- Can Metallic Top Rim -->
+                <path d="M45 42 C45 35, 175 35, 175 42 L180 52 C180 57, 40 57, 40 52 Z" fill="url(#canTopMetalGrad)" />
+                <ellipse cx="110" cy="40" rx="65" ry="10" fill="#2A3B37" stroke="#607D75" stroke-width="2" />
+
+                <!-- Can Pull Tab -->
+                <path d="M100 38 C100 35, 120 35, 120 38 L115 42 L105 42 Z" fill="#9FB8B2" />
+
+                <!-- Can Metallic Bottom Rim -->
+                <path d="M40 335 C40 330, 180 330, 180 335 L170 352 C170 356, 50 356, 50 352 Z"
+                  fill="url(#canBottomMetalGrad)" />
+
+                <!-- Metallic Specular Highlights -->
+                <path d="M50 45 L50 345" stroke="rgba(255,255,255,0.4)" stroke-width="4" filter="blur(2px)" />
+                <path d="M60 45 L60 345" stroke="rgba(255,255,255,0.15)" stroke-width="8" />
+                <path d="M170 45 L170 345" stroke="rgba(0,0,0,0.3)" stroke-width="6" />
+
+                <defs>
+                  <linearGradient id="canMetalGrad" x1="40" y1="40" x2="180" y2="350" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#142B26" />
+                    <stop offset="0.3" stop-color="#23423B" />
+                    <stop offset="0.7" stop-color="#0E1F1C" />
+                    <stop offset="1" stop-color="#081412" />
+                  </linearGradient>
+
+                  <linearGradient id="canLabelGrad" x1="40" y1="80" x2="180" y2="320" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#FF6B35" />
+                    <stop offset="0.5" stop-color="#183630" />
+                    <stop offset="1" stop-color="#26E0C2" />
+                  </linearGradient>
+
+                  <linearGradient id="canTopMetalGrad" x1="40" y1="35" x2="180" y2="57" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#607D75" />
+                    <stop offset="0.5" stop-color="#D1E0DC" />
+                    <stop offset="1" stop-color="#3A524C" />
+                  </linearGradient>
+
+                  <linearGradient id="canBottomMetalGrad" x1="40" y1="330" x2="180" y2="356"
+                    gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#3A524C" />
+                    <stop offset="0.5" stop-color="#9FB8B2" />
+                    <stop offset="1" stop-color="#142B26" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+
+            <!-- Ice cubes float tag -->
+            <div class="ice-tag">
+              <span class="ice-icon">🧊</span>
+              <span>مُثلّجة بلورياً</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Flavors Section (شريط النكهات) -->
+  <section class="flavors-section" id="flavors">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-tag">تشكيلة الانتعاش</div>
+        <h2 class="section-title">نكهات ترند المُثلّجة</h2>
+        <p class="section-desc">
+          كل بطاقة زجاجية تعكس لون التوهج الخاص بنكهتها الطبيعية المستخلصة من أجود الثمار الحمضية.
+        </p>
+      </div>
+
+      <!-- Square Glass Cards Grid -->
+      <div class="flavors-grid">
+
+        <!-- Flavor Card 1: Citrus Orange -->
+        <div class="flavor-card-wrapper" data-flavor="citrus-orange">
+          <div class="glow-blob glow-citrus-orange"></div>
+          <div class="glass-panel flavor-card">
+            <div class="flavor-badge badge-citrus">الأكثر مبيعاً</div>
+            <div class="flavor-visual">
+              <div class="can-mini-render can-citrus">
+                <svg viewBox="0 0 100 160" class="mini-can-svg">
+                  <rect x="20" y="20" width="60" height="120" rx="10" fill="url(#gradCitrusCan)" />
+                  <ellipse cx="50" cy="20" rx="30" ry="5" fill="#607D75" />
+                  <circle cx="50" cy="80" r="18" fill="rgba(255,255,255,0.15)" stroke="#FF6B35" stroke-width="1.5" />
+                  <text x="50" y="84" font-family="Cairo" font-weight="800" font-size="10" fill="#FFF"
+                    text-anchor="middle">برتقال</text>
+                  <defs>
+                    <linearGradient id="gradCitrusCan" x1="0" y1="0" x2="1" y2="1">
+                      <stop stop-color="#FF6B35" />
+                      <stop offset="0.7" stop-color="#2D1A10" />
+                      <stop offset="1" stop-color="#081412" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+            <div class="flavor-info">
+              <h3 class="flavor-name">برتقال فوار</h3>
+              <span class="flavor-sub">Citrus Orange Fizz</span>
+              <p class="flavor-desc">مزيج حمضي مكثف من البرتقال الصيفي واليوسفي مع فقاعات غازية حادة تمنحك انتعاشاً
+                فورياً.</p>
+
+              <div class="flavor-specs">
+                <div class="spec-row">
+                  <span>حدّة الفقاعات:</span>
+                  <div class="meter-bar">
+                    <div class="meter-fill fill-orange" style="width: 90%;"></div>
+                  </div>
+                </div>
+                <div class="spec-row">
+                  <span>درجة البرودة:</span>
+                  <div class="meter-bar">
+                    <div class="meter-fill fill-turquoise" style="width: 100%;"></div>
+                  </div>
+                </div>
+              </div>
+
+              <button class="btn btn-glass btn-block open-modal-btn" data-modal-flavor="citrus-orange">تفاصيل النكهة
+                والقيمة</button>
+            </div>
+          </div>
+        </div><!-- Flavor Card 1: Citrus Orange -->
+        <div class="flavor-card-wrapper" data-flavor="citrus-orange">
+          <div class="glow-blob glow-citrus-orange"></div>
+          <div class="glass-panel flavor-card">
+            <div class="flavor-badge badge-citrus">الأكثر مبيعاً</div>
+            <div class="flavor-visual">
+              <div class="can-mini-render can-citrus">
+                <svg viewBox="0 0 100 160" class="mini-can-svg">
+                  <rect x="20" y="20" width="60" height="120" rx="10" fill="url(#gradCitrusCan)" />
+                  <ellipse cx="50" cy="20" rx="30" ry="5" fill="#607D75" />
+                  <circle cx="50" cy="80" r="18" fill="rgba(255,255,255,0.15)" stroke="#FF6B35" stroke-width="1.5" />
+                  <text x="50" y="84" font-family="Cairo" font-weight="800" font-size="10" fill="#FFF"
+                    text-anchor="middle">برتقال</text>
+                  <defs>
+                    <linearGradient id="gradCitrusCan" x1="0" y1="0" x2="1" y2="1">
+                      <stop stop-color="#FF6B35" />
+                      <stop offset="0.7" stop-color="#2D1A10" />
+                      <stop offset="1" stop-color="#081412" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+            <div class="flavor-info">
+              <h3 class="flavor-name">برتقال فوار</h3>
+              <span class="flavor-sub">Citrus Orange Fizz</span>
+              <p class="flavor-desc">مزيج حمضي مكثف من البرتقال الصيفي واليوسفي مع فقاعات غازية حادة تمنحك انتعاشاً
+                فورياً.</p>
+
+              <div class="flavor-specs">
+                <div class="spec-row">
+                  <span>حدّة الفقاعات:</span>
+                  <div class="meter-bar">
+                    <div class="meter-fill fill-orange" style="width: 90%;"></div>
+                  </div>
+                </div>
+                <div class="spec-row">
+                  <span>درجة البرودة:</span>
+                  <div class="meter-bar">
+                    <div class="meter-fill fill-turquoise" style="width: 100%;"></div>
+                  </div>
+                </div>
+              </div>
+
+              <button class="btn btn-glass btn-block open-modal-btn" data-modal-flavor="citrus-orange">تفاصيل النكهة
+                والقيمة</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Flavor Card 2: Frosted Mint Lime -->
+        <div class="flavor-card-wrapper" data-flavor="mint-lime">
+          <div class="glow-blob glow-mint-lime"></div>
+          <div class="glass-panel flavor-card">
+            <div class="flavor-badge badge-fizz">الانتعاش الأقصى</div>
+            <div class="flavor-visual">
+              <div class="can-mini-render can-lime">
+                <svg viewBox="0 0 100 160" class="mini-can-svg">
+                  <rect x="20" y="20" width="60" height="120" rx="10" fill="url(#gradLimeCan)" />
+                  <ellipse cx="50" cy="20" rx="30" ry="5" fill="#607D75" />
+                  <circle cx="50" cy="80" r="18" fill="rgba(255,255,255,0.15)" stroke="#26E0C2" stroke-width="1.5" />
+                  <text x="50" y="84" font-family="Cairo" font-weight="800" font-size="10" fill="#FFF"
+                    text-anchor="middle">ليمون</text>
+                  <defs>
+                    <linearGradient id="gradLimeCan" x1="0" y1="0" x2="1" y2="1">
+                      <stop stop-color="#26E0C2" />
+                      <stop offset="0.7" stop-color="#0E332D" />
+                      <stop offset="1" stop-color="#081412" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+            <div class="flavor-info">
+              <h3 class="flavor-name">ليمون نعناع مُثلّج</h3>
+              <span class="flavor-sub">Frosted Mint Lime</span>
+              <p class="flavor-desc">عصير الليمون الأخضر الصافي الممزوج بأوراق الننعنع الجبلي البارد ليطفئ حرارة الصيف
+                بلمسة مثلجة.</p>
+
+              <div class="flavor-specs">
+                <div class="spec-row">
+                  <span>حدّة الفقاعات:</span>
+                  <div class="meter-bar">
+                    <div class="meter-fill fill-turquoise" style="width: 85%;"></div>
+                  </div>
+                </div>
+                <div class="spec-row">
+                  <span>درجة البرودة:</span>
+                  <div class="meter-bar">
+                    <div class="meter-fill fill-turquoise" style="width: 95%;"></div>
+                  </div>
+                </div>
+              </div>
+
+              <button class="btn btn-glass btn-block open-modal-btn" data-modal-flavor="mint-lime">تفاصيل النكهة
+                والقيمة</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Flavor Card 3: Turquoise Berry -->
+        <div class="flavor-card-wrapper" data-flavor="turquoise-berry">
+          <div class="glow-blob glow-turquoise-berry"></div>
+          <div class="glass-panel flavor-card">
+            <div class="flavor-badge badge-fizz">إصدار خاص</div>
+            <div class="flavor-visual">
+              <div class="can-mini-render can-berry">
+                <svg viewBox="0 0 100 160" class="mini-can-svg">
+                  <rect x="20" y="20" width="60" height="120" rx="10" fill="url(#gradBerryCan)" />
+                  <ellipse cx="50" cy="20" rx="30" ry="5" fill="#607D75" />
+                  <circle cx="50" cy="80" r="18" fill="rgba(255,255,255,0.15)" stroke="#00C2A8" stroke-width="1.5" />
+                  <text x="50" y="84" font-family="Cairo" font-weight="800" font-size="10" fill="#FFF"
+                    text-anchor="middle">توت</text>
+                  <defs>
+                    <linearGradient id="gradBerryCan" x1="0" y1="0" x2="1" y2="1">
+                      <stop stop-color="#00C2A8" />
+                      <stop offset="0.7" stop-color="#0A2C29" />
+                      <stop offset="1" stop-color="#081412" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+            <div class="flavor-info">
+              <h3 class="flavor-name">توت مائي فيروزي</h3>
+              <span class="flavor-sub">Turquoise Berry Fizz</span>
+              <p class="flavor-desc">نكهة التوت البري الأزرق المائي المستوحى من لون الفيروز الجليدي، طعم فريد ومتوازن
+                للغاية.</p>
+
+              <div class="flavor-specs">
+                <div class="spec-row">
+                  <span>حدّة الفقاعات:</span>
+                  <div class="meter-bar">
+                    <div class="meter-fill fill-turquoise" style="width: 80%;"></div>
+                  </div>
+                </div>
+                <div class="spec-row">
+                  <span>درجة البرودة:</span>
+                  <div class="meter-bar">
+                    <div class="meter-fill fill-turquoise" style="width: 90%;"></div>
+                  </div>
+                </div>
+              </div>
+
+              <button class="btn btn-glass btn-block open-modal-btn" data-modal-flavor="turquoise-berry">تفاصيل النكهة
+                والقيمة</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Flavor Card 4: Ruby Citrus -->
+        <div class="flavor-card-wrapper" data-flavor="ruby-citrus">
+          <div class="glow-blob glow-ruby-citrus"></div>
+          <div class="glass-panel flavor-card">
+            <div class="flavor-badge badge-citrus">طعم غني</div>
+            <div class="flavor-visual">
+              <div class="can-mini-render can-ruby">
+                <svg viewBox="0 0 100 160" class="mini-can-svg">
+                  <rect x="20" y="20" width="60" height="120" rx="10" fill="url(#gradRubyCan)" />
+                  <ellipse cx="50" cy="20" rx="30" ry="5" fill="#607D75" />
+                  <circle cx="50" cy="80" r="18" fill="rgba(255,255,255,0.15)" stroke="#FF5252" stroke-width="1.5" />
+                  <text x="50" y="84" font-family="Cairo" font-weight="800" font-size="10" fill="#FFF"
+                    text-anchor="middle">رمان</text>
+                  <defs>
+                    <linearGradient id="gradRubyCan" x1="0" y1="0" x2="1" y2="1">
+                      <stop stop-color="#FF5252" />
+                      <stop offset="0.7" stop-color="#3D1212" />
+                      <stop offset="1" stop-color="#081412" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+            <div class="flavor-info">
+              <h3 class="flavor-name">رمان حمضي</h3>
+              <span class="flavor-sub">Ruby Citrus Pomegranate</span>
+              <p class="flavor-desc">طعم الرمان الياقوتي المفعم بالحيوية مع قطرات الجريب فروت الوردي للحصول على طعم قوي
+                ومنعش.</p>
+
+              <div class="flavor-specs">
+                <div class="spec-row">
+                  <span>حدّة الفقاعات:</span>
+                  <div class="meter-bar">
+                    <div class="meter-fill fill-orange" style="width: 92%;"></div>
+                  </div>
+                </div>
+                <div class="spec-row">
+                  <span>درجة البرودة:</span>
+                  <div class="meter-bar">
+                    <div class="meter-fill fill-turquoise" style="width: 88%;"></div>
+                  </div>
+                </div>
+              </div>
+
+              <button class="btn btn-glass btn-block open-modal-btn" data-modal-flavor="ruby-citrus">تفاصيل النكهة
+                والقيمة</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Fizz & Temperature Lab Section -->
+  <section class="fizz-lab-section" id="fizz-lab">
+    <div class="container">
+      <div class="glass-panel lab-container-panel">
+        <div class="glow-blob lab-glow"></div>
+
+        <div class="lab-layout">
+          <div class="lab-controls">
+            <div class="section-tag">تجربة تفاعلية</div>
+            <h2 class="section-title">مختبر ترند للفقاعات والبرودة</h2>
+            <p class="section-desc">
+              تحكّم في معايير الانتعاش الخاصة بك وشاهد كيف تتغير قطرات التكثيف والفقاعات الغازية مباشرة على العلبة
+              المُثلّجة.
+            </p>
+
+            <!-- Customizer Controls -->
+            <div class="control-group">
+              <label for="tempSlider" class="control-label">
+                <span>درجة البرودة والتكثيف</span>
+                <strong id="tempValue">-4°C (ثلج بلوري)</strong>
+              </label>
+              <input type="range" id="tempSlider" min="-8" max="4" value="-4" class="custom-range">
+            </div>
+
+            <div class="control-group">
+              <label for="fizzSlider" class="control-label">
+                <span>شدة فقاعات الغاز</span>
+                <strong id="fizzValue">فوارة بكثافة (High Fizz)</strong>
+              </label>
+              <input type="range" id="fizzSlider" min="1" max="5" value="4" class="custom-range">
+            </div>
+
+            <div class="control-group">
+              <label class="control-label">اختيار التوهج والنكهة</label>
+              <div class="flavor-radio-group">
+                <button class="flavor-chip active" data-chip-color="#FF6B35" data-chip-name="برتقال فوار">برتقال
+                  حمضي</button>
+                <button class="flavor-chip" data-chip-color="#26E0C2" data-chip-name="ليمون نعناع">ليمون فيروزي</button>
+                <button class="flavor-chip" data-chip-color="#00C2A8" data-chip-name="توت مائي">توت مائي</button>
+                <button class="flavor-chip" data-chip-color="#FF5252" data-chip-name="رمان حمضي">رمان ياقوتي</button>
+              </div>
+            </div>
+
+            <div class="lab-result-box">
+              <span class="lab-box-title">وصفة الانتعاش المعتمدة:</span>
+              <p id="labSummaryText">مشروب برتقال حمضي بنسبة تكثيف عال ومستوى فقاعات 80% في درجة حرارة -4° مئوية.</p>
+              <button class="btn btn-citrus" id="saveMixBtn">حفظ خلطة الانتعاش الخاصة بك</button>
+            </div>
+          </div>
+
+          <!-- Lab Interactive Preview Visual -->
+          <div class="lab-preview-display">
+            <div class="interactive-can-box" id="interactiveCanBox">
+              <div class="dynamic-glow" id="dynamicCanGlow"></div>
+
+              <!-- Dynamic Condensation Drops Container -->
+              <div class="drops-container" id="dropsContainer"></div>
+
+              <!-- Dynamic Bubbles Canvas Overlay -->
+              <canvas id="canBubblesCanvas" width="220" height="340"></canvas>
+
+              <div class="preview-can-graphic">
+                <svg viewBox="0 0 160 260" class="lab-svg-can">
+                  <path d="M30 30 C30 20, 130 20, 130 30 L130 230 C130 242, 30 242, 30 230 Z"
+                    fill="url(#labCanBodyGrad)" id="labCanBody" />
+                  <path d="M30 60 L130 60 L130 210 L30 210 Z" fill="rgba(0,0,0,0.3)" />
+                  <circle cx="80" cy="135" r="32" fill="rgba(255,255,255,0.08)" stroke="url(#labCanStroke)"
+                    stroke-width="2" id="labCircleGlow" />
+                  <text x="80" y="132" font-family="Cairo" font-weight="800" font-size="18" fill="#F4F7F6"
+                    text-anchor="middle" id="labCanTitle">ترند</text>
+                  <text x="80" y="150" font-family="Cairo" font-weight="600" font-size="9" fill="#26E0C2"
+                    text-anchor="middle" id="labCanSub">FROSTED FIZZ</text>
+
+                  <defs>
+                    <linearGradient id="labCanBodyGrad" x1="0" y1="0" x2="1" y2="1">
+                      <stop stop-color="#FF6B35" id="labGradStop1" />
+                      <stop offset="0.6" stop-color="#142B26" />
+                      <stop offset="1" stop-color="#081412" />
+                    </linearGradient>
+                    <linearGradient id="labCanStroke" x1="0" y1="0" x2="1" y2="0">
+                      <stop stop-color="#FF6B35" id="labStrokeStop1" />
+                      <stop offset="1" stop-color="#26E0C2" id="labStrokeStop2" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- News Section (قسم الأخبار والحدث — بطاقات زجاجية أفقية) -->
+  <section class="news-section" id="news">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-tag">عالم ترند</div>
+        <h2 class="section-title">الأخبار والابتكار الزجاجي</h2>
+        <p class="section-desc">
+          مستجدات استدامة التغليف، تقنيات التبريد البلوري، والفعاليات القادمة لعلامة ترند.
+        </p>
+      </div>
+
+      <!-- Horizontal Glass Cards List -->
+      <div class="news-horizontal-list">
+
+        <!-- News Card 1 -->
+        <article class="news-card-wrapper">
+          <div class="glow-blob glow-news-1"></div>
+          <div class="glass-panel news-card-horizontal">
+            <div class="news-image-box">
+              <div class="news-tag-badge">استدامة</div>
+              <svg class="news-illustration" viewBox="0 0 200 140">
+                <rect width="200" height="140" fill="#0E1F1C" rx="12" />
+                <path d="M40 90 Q100 30 160 90" stroke="#26E0C2" stroke-width="4" fill="none" />
+                <circle cx="100" cy="60" r="25" fill="rgba(38, 224, 194, 0.15)" stroke="#26E0C2" stroke-width="1.5" />
+                <text x="100" y="65" font-family="Cairo" font-size="20" fill="#F4F7F6" text-anchor="middle">♻️
+                  100%</text>
+              </svg>
+            </div>
+            <div class="news-content-box">
+              <span class="news-date">2 سبتمبر 2026</span>
+              <h3 class="news-title">علب ألومنيوم مُثلّجة 100% قابلة لإعادة التدوير للأبد</h3>
+              <p class="news-excerpt">
+                تعلن ترند عن تحولها الكامل إلى العلب الألومنيوم المحمية بطبقة زجاجية عازلة تمنع تفاعل الضوء وتحافظ على
+                شدة البرودة مع تقليل الانبعاثات الكربونية.
+              </p>
+              <a href="news.html" class="news-link">اقرأ التفاصيل الكاملة في صفحة الأخبار ←</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- News Card 2 -->
+        <article class="news-card-wrapper">
+          <div class="glow-blob glow-news-2"></div>
+          <div class="glass-panel news-card-horizontal">
+            <div class="news-image-box">
+              <div class="news-tag-badge">ابتكار التبريد</div>
+              <svg class="news-illustration" viewBox="0 0 200 140">
+                <rect width="200" height="140" fill="#0E1F1C" rx="12" />
+                <circle cx="70" cy="70" r="30" fill="rgba(255, 107, 53, 0.2)" stroke="#FF6B35" stroke-width="2" />
+                <circle cx="130" cy="70" r="30" fill="rgba(38, 224, 194, 0.2)" stroke="#26E0C2" stroke-width="2" />
+                <text x="100" y="75" font-family="Cairo" font-size="18" fill="#F4F7F6" text-anchor="middle">❄️
+                  -4°C</text>
+              </svg>
+            </div>
+            <div class="news-content-box">
+              <span class="news-date">25 أغسطس 2026</span>
+              <h3 class="news-title">تقنية التبريد السريع: كيف تحافظ ترند على قوة الفقاعات عند -4 درجات؟</h3>
+              <p class="news-excerpt">
+                شرح علمي لكيفية احتجاز فقاعات ثاني أكسيد الكربون داخل السائل الحمضي تحت ضغط متوازن يضمن انطلاق الانتعاش
+                لحظة فتح العلبة.
+              </p>
+              <a href="news.html" class="news-link">اقرأ التفاصيل الكاملة في صفحة الأخبار ←</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Store Locator Bar Section -->
+  <section class="locator-section" id="locator">
+    <div class="container">
+      <div class="glass-panel locator-panel">
+        <div class="glow-blob locator-glow"></div>
+        <div class="locator-content">
+          <h2 class="locator-title">أين تجد ثلاجات ترند المُثلّجة؟</h2>
+          <p class="locator-desc">أدخل موقعك أو مدينتك للوصول إلى أقرب منفذ بيع يحتوي على منصة ترند الزجاجية المبردة.
+          </p>
+
+          <form class="locator-search-form" id="locatorForm" onsubmit="event.preventDefault();">
+            <div class="search-input-wrap">
+              <input type="text"
+                placeholder="أدخل اسم الحي أو المنطقة في إب (مثال: شارع العدين، المعاين، السحول، الدليل)..."
+                class="locator-input" id="locatorInput">
+              <button type="submit" class="btn btn-citrus" id="searchStoreBtn">ابحث عن أقرب ثلاجة</button>
+            </div>
+          </form>
+
+          <div class="locator-results" id="locatorResults">
+            <div class="store-chip">📍 إب — شارع العدين (مركز الانتعاش الرئيسي)</div>
+            <div class="store-chip">📍 إب — المعاين (منصة ترند الزجاجية)</div>
+            <div class="store-chip">📍 إب — السحول / الدليل (ثلاجة الانتعاش المبردة)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dark Glass Footer -->
+  <footer class="glass-footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#" class="brand-logo">
+            <span class="logo-text">ترند <small>TREND</small></span>
+          </a>
+          <p class="footer-tagline">
+            هوية زجاجية عصرية، انتعاش الفيروز والحمضيات، فقاعات مُثلّجة تطفئ العطش.
+          </p>
+          <div class="footer-contact-num">
+            <span>الرقم الموحد للانتعاش:</span>
+            <strong dir="ltr">8000056</strong>
+          </div>
+        </div>
+
+        <div class="footer-links-group">
+          <h4>روابط السريعة</h4>
+          <ul>
+            <li><a href="#hero">الرئيسية</a></li>
+            <li><a href="#flavors">قائمة النكهات</a></li>
+            <li><a href="#fizz-lab">مختبر الانتعاش</a></li>
+            <li><a href="#news">الأخبار والفعاليات</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-group">
+          <h4>الجودة والبيئة</h4>
+          <ul>
+            <li><a href="#">استدامة الألومنيوم</a></li>
+            <li><a href="#">الحقائق الغذائية</a></li>
+            <li><a href="#">سياسة الجودة</a></li>
+            <li><a href="#">أسئلة شائعة</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-newsletter">
+          <h4>اشترك في نشرة الانتعاش</h4>
+          <p>احصل على أحدث إشعارات النكهات المحدودة والفعاليات الصيفية.</p>
+          <form class="newsletter-form" id="newsletterForm" onsubmit="event.preventDefault();">
+            <input type="email" placeholder="بريدك الإلكتروني..." required class="newsletter-input">
+            <button type="submit" class="btn btn-citrus btn-sm">اشترك</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 ترند للمشروبات الغازية (TREND Soda Inc). جميع الحقوق محفوظة.</p>
+        <p class="footer-subtext">تصميم بالهوية الزجاجية المُثلّجة (Glassmorphic Cold Theme) — بدون لون بنفسجي.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Flavor Detail Modal -->
+  <div class="modal-backdrop" id="flavorModal" aria-hidden="true">
+    <div class="glass-panel modal-panel">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="إغلاق">&times;</button>
+
+      <div class="glow-blob modal-glow" id="modalGlow"></div>
+
+      <div class="modal-body" id="modalContent">
+        <!-- Content inserted dynamically via app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+</body>
+
+</html>

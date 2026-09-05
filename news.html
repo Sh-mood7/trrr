@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ترند | الأخبار والابتكار الزجاجي — TREND News</title>
+  <meta name="description" content="مركز أخبار ترند للمشروبات الغازية. آخر مستجدات استدامة العلب الألومنيوم، تقنيات التبريد البلوري، والفعاليات الصيفية.">
+  
+  <!-- Google Fonts: Cairo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Floating Glass Header -->
+  <header class="glass-header-wrap">
+    <nav class="glass-panel main-nav" id="mainNav">
+      <a href="index.html" class="brand-logo" id="brandLogo">
+        <span class="logo-icon">
+          <svg width="24" height="28" viewBox="0 0 24 28" fill="none">
+            <path d="M12 2C12 2 4 12 4 18C4 22.4183 7.58172 26 12 26C16.4183 26 20 22.4183 20 18C20 12 12 2 12 2Z" fill="url(#logoGrad)" />
+            <circle cx="10" cy="14" r="1.5" fill="#FFFFFF" opacity="0.8"/>
+            <circle cx="14" cy="19" r="1" fill="#FFFFFF" opacity="0.9"/>
+            <defs>
+              <linearGradient id="logoGrad" x1="4" y1="2" x2="20" y2="26" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#FF6B35" />
+                <stop offset="1" stop-color="#26E0C2" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </span>
+        <span class="logo-text">ترند <small>NEWS</small></span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html#hero">الرئيسية</a></li>
+        <li><a href="index.html#flavors">النكهات</a></li>
+        <li><a href="index.html#fizz-lab">مختبر الانتعاش</a></li>
+        <li><a href="news.html" class="active">الأخبار</a></li>
+        <li><a href="index.html#locator">منافذ البيع</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="index.html#flavors" class="btn btn-citrus">اطلب الانتعاش الان</a>
+        <button class="mobile-toggle-btn" id="mobileNavToggle" aria-label="القائمة">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- News Page Hero Banner -->
+  <section class="news-hero-section">
+    <div class="bubbles-bg-container" id="bubblesContainer"></div>
+    
+    <div class="glow-blob glow-news-hero-1"></div>
+    <div class="glow-blob glow-news-hero-2"></div>
+
+    <div class="container text-center">
+      <div class="hero-badge">
+        <span class="fizz-dot"></span>
+        مركز الأخبار والابتكارات
+      </div>
+      <h1 class="news-main-title">
+        أخبار <span class="highlight-citrus">ترند</span> وابتكارات الانتعاش
+      </h1>
+      <p class="news-main-subtitle">
+        متابعة حية لابتكارات استدامة العلب المُثلّجة، تقنيات التبريد البلوري، وأحدث إطلاقات النكهات المحدودة.
+      </p>
+
+      <!-- Category Filter Chips & Search -->
+      <div class="glass-panel news-filter-panel">
+        <div class="news-categories">
+          <button class="news-cat-chip active" data-cat="all">جميع المقالات</button>
+          <button class="news-cat-chip" data-cat="sustainability">الاستدامة والبيئة</button>
+          <button class="news-cat-chip" data-cat="tech">تقنيات التبريد</button>
+          <button class="news-cat-chip" data-cat="events">الفعاليات الصيفية</button>
+          <button class="news-cat-chip" data-cat="releases">إطلاقات النكهات</button>
+        </div>
+
+        <div class="news-search-box">
+          <input type="text" id="newsSearchInput" placeholder="ابحث في الأخبار والابتكارات..." class="news-search-input">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured News Story -->
+  <section class="featured-news-section">
+    <div class="container">
+      <div class="news-card-wrapper">
+        <div class="glow-blob glow-featured-news"></div>
+        <div class="glass-panel featured-news-card">
+          <div class="featured-img-box">
+            <span class="news-tag-badge">خبر رئيسي</span>
+            <svg class="news-illustration-lg" viewBox="0 0 400 240">
+              <rect width="400" height="240" fill="#0E1F1C" rx="16"/>
+              <path d="M50 160 Q200 40 350 160" stroke="#FF6B35" stroke-width="5" fill="none"/>
+              <circle cx="200" cy="110" r="45" fill="rgba(255, 107, 53, 0.2)" stroke="#FF6B35" stroke-width="2"/>
+              <text x="200" y="118" font-family="Cairo" font-size="28" fill="#F4F7F6" text-anchor="middle">♻️ 100%</text>
+            </svg>
+          </div>
+          
+          <div class="featured-content-box">
+            <div class="news-meta">
+              <span class="news-date">2 سبتمبر 2026</span>
+              <span class="news-category">الاستدامة والبيئة</span>
+            </div>
+            <h2 class="featured-title">علب ألومنيوم مُثلّجة 100% قابلة لإعادة التدوير للأبد دون فقدان البرودة</h2>
+            <p class="featured-excerpt">
+              تعلن ترند عن تحولها الكامل إلى العلب الألومنيوم المحمية بطبقة زجاجية عازلة تمنع تفاعل الضوء وتحافظ على شدة البرودة مع تقليل الانبعاثات الكربونية بنسبة 75%. هذه الخطوة تأتي ضمن استراتيجية ترند للحفاظ على البيئة.
+            </p>
+            <div class="featured-actions">
+              <button class="btn btn-citrus read-full-news-btn" data-news-id="1">اقرأ المقال بالكامل</button>
+              <span class="read-time">⏳ وقت القراءة: 3 دقائق</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- News Grid Section -->
+  <section class="news-grid-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">أحدث المقالات والتقارير</h2>
+        <p class="section-desc">تصفح التغطيات الحصرية لفعاليات ترند وتجارب الانتعاش الفوار.</p>
+      </div>
+
+      <div class="news-cards-grid" id="newsGrid">
+
+        <!-- News Item 2 -->
+        <article class="news-card-wrapper" data-cat="tech">
+          <div class="glow-blob glow-news-item"></div>
+          <div class="glass-panel news-card-vertical">
+            <div class="news-card-img">
+              <span class="news-tag-badge">ابتكار التبريد</span>
+              <svg viewBox="0 0 300 160" class="news-card-svg">
+                <rect width="300" height="160" fill="#0E1F1C"/>
+                <circle cx="150" cy="80" r="35" fill="rgba(38, 224, 194, 0.2)" stroke="#26E0C2" stroke-width="2"/>
+                <text x="150" y="86" font-family="Cairo" font-size="20" fill="#F4F7F6" text-anchor="middle">❄️ -4°C</text>
+              </svg>
+            </div>
+            <div class="news-card-body">
+              <span class="news-date">25 أغسطس 2026</span>
+              <h3 class="news-card-title">تقنية التبريد السريع: كيف تحافظ ترند على قوة الفقاعات عند -4 درجات؟</h3>
+              <p class="news-card-text">
+                شرح علمي لكيفية احتجاز فقاعات ثاني أكسيد الكربون داخل السائل الحمضي تحت ضغط متوازن يضمن انطلاق الانتعاش لحظة فتح العلبة.
+              </p>
+              <button class="btn btn-glass btn-block read-full-news-btn" data-news-id="2">اقرأ المقال الكامل</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- News Item 3 -->
+        <article class="news-card-wrapper" data-cat="releases">
+          <div class="glow-blob glow-news-item"></div>
+          <div class="glass-panel news-card-vertical">
+            <div class="news-card-img">
+              <span class="news-tag-badge">إصدار جديد</span>
+              <svg viewBox="0 0 300 160" class="news-card-svg">
+                <rect width="300" height="160" fill="#0E1F1C"/>
+                <circle cx="150" cy="80" r="35" fill="rgba(0, 194, 168, 0.2)" stroke="#00C2A8" stroke-width="2"/>
+                <text x="150" y="86" font-family="Cairo" font-size="20" fill="#F4F7F6" text-anchor="middle">🫐 TURQUOISE</text>
+              </svg>
+            </div>
+            <div class="news-card-body">
+              <span class="news-date">18 أغسطس 2026</span>
+              <h3 class="news-card-title">إطلاق نكهة التوت المائي الفيروزي في جميع منافذ البيع بمدينة إب</h3>
+              <p class="news-card-text">
+                وصول شحنات نكهة التوت المائي الفيروزي ذات الإصدار المحدود إلى الثلاجات الزجاجية المبردة في إب وجميع الفروع.
+              </p>
+              <button class="btn btn-glass btn-block read-full-news-btn" data-news-id="3">اقرأ المقال الكامل</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- News Item 4 -->
+        <article class="news-card-wrapper" data-cat="events">
+          <div class="glow-blob glow-news-item"></div>
+          <div class="glass-panel news-card-vertical">
+            <div class="news-card-img">
+              <span class="news-tag-badge">فعاليات</span>
+              <svg viewBox="0 0 300 160" class="news-card-svg">
+                <rect width="300" height="160" fill="#0E1F1C"/>
+                <circle cx="150" cy="80" r="35" fill="rgba(255, 107, 53, 0.2)" stroke="#FF6B35" stroke-width="2"/>
+                <text x="150" y="86" font-family="Cairo" font-size="20" fill="#F4F7F6" text-anchor="middle">🌲 IBB FIZZ</text>
+              </svg>
+            </div>
+            <div class="news-card-body">
+              <span class="news-date">10 أغسطس 2026</span>
+              <h3 class="news-card-title">منصة ترند في مدينة إب: تجربة الانتعاش الزجاجي بين طبيعة إب الخضراء</h3>
+              <p class="news-card-text">
+                تغطية خاصة لافتتاح مكعبات الانتعاش الزجاجية المعزولة المخصصة لتوزيع المشروبات المثلجة للزوار بين مناظر إب الخضراء.
+              </p>
+              <button class="btn btn-glass btn-block read-full-news-btn" data-news-id="4">اقرأ المقال الكامل</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- News Item 5 -->
+        <article class="news-card-wrapper" data-cat="sustainability">
+          <div class="glow-blob glow-news-item"></div>
+          <div class="glass-panel news-card-vertical">
+            <div class="news-card-img">
+              <span class="news-tag-badge">شراكة بيئية</span>
+              <svg viewBox="0 0 300 160" class="news-card-svg">
+                <rect width="300" height="160" fill="#0E1F1C"/>
+                <circle cx="150" cy="80" r="35" fill="rgba(38, 224, 194, 0.2)" stroke="#26E0C2" stroke-width="2"/>
+                <text x="150" y="86" font-family="Cairo" font-size="20" fill="#F4F7F6" text-anchor="middle">🌱 ECO LIME</text>
+              </svg>
+            </div>
+            <div class="news-card-body">
+              <span class="news-date">1 أغسطس 2026</span>
+              <h3 class="news-card-title">شراكة مع مزارع الحمضيات العضوية لدعم زراعة الليمون الأخضر</h3>
+              <p class="news-card-text">
+                توقع ترند اتفاقية توريد حصري مع مزارع حمضيات محلية لضمان قطف ثمار الليمون والبرتقال الطازجة وإعداد العصائر بدون مواد حافظة.
+              </p>
+              <button class="btn btn-glass btn-block read-full-news-btn" data-news-id="5">اقرأ المقال الكامل</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- News Article Modal Window -->
+  <div class="modal-backdrop" id="newsArticleModal" aria-hidden="true">
+    <div class="glass-panel modal-panel">
+      <button class="modal-close-btn" id="newsModalCloseBtn" aria-label="إغلاق">&times;</button>
+      <div class="glow-blob modal-glow" id="newsModalGlow"></div>
+      <div class="modal-body" id="newsModalContent">
+        <!-- Content injected by JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Dark Glass Footer -->
+  <footer class="glass-footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <span class="logo-text">ترند <small>TREND</small></span>
+          </a>
+          <p class="footer-tagline">
+            هوية زجاجية عصرية، انتعاش الفيروز والحمضيات، فقاعات مُثلّجة تطفئ العطش.
+          </p>
+          <div class="footer-contact-num">
+            <span>الرقم الموحد للانتعاش:</span>
+            <strong dir="ltr">8000056</strong>
+          </div>
+        </div>
+
+        <div class="footer-links-group">
+          <h4>روابط السريعة</h4>
+          <ul>
+            <li><a href="index.html#hero">الرئيسية</a></li>
+            <li><a href="index.html#flavors">قائمة النكهات</a></li>
+            <li><a href="index.html#fizz-lab">مختبر الانتعاش</a></li>
+            <li><a href="news.html">الأخبار والفعاليات</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-group">
+          <h4>الجودة والبيئة</h4>
+          <ul>
+            <li><a href="news.html">استدامة الألومنيوم</a></li>
+            <li><a href="#">الحقائق الغذائية</a></li>
+            <li><a href="#">سياسة الجودة</a></li>
+            <li><a href="#">أسئلة شائعة</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-newsletter">
+          <h4>اشترك في نشرة الأخبار</h4>
+          <p>احصل على أحدث إشعارات المقالات والفعاليات الصيفية.</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); alert('تم الاشتراك في نشرة الأخبار بنجاح!');">
+            <input type="email" placeholder="بريدك الإلكتروني..." required class="newsletter-input">
+            <button type="submit" class="btn btn-citrus btn-sm">اشترك</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 ترند للمشروبات الغازية (TREND Soda Inc). جميع الحقوق محفوظة.</p>
+        <p class="footer-subtext">مركز الأخبار الزجاجي (Glassmorphic News Portal) — بدون لون بنفسجي.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+</body>
+</html>
